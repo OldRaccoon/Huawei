@@ -15,3 +15,29 @@ ABCDEF A
 复制
 1
 */
+
+
+#include<iostream>
+#include<string>
+#include<algorithm>
+using namespace std;
+
+int main() {
+	string s;
+	char l;
+	cin >> s;
+	cin >> l;
+	int count = 0;
+	for (int i = 0; i <= s.size(); i++) {
+		if (s[i] == l||s[i]==l-'a'+'A'||s[i]==l-'A'+'a') {
+			count++;
+		}
+		
+		
+
+	}
+
+	cout << count << endl;
+
+
+}
