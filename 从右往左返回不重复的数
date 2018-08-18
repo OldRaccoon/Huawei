@@ -1,0 +1,47 @@
+/*题目描述
+输入一个int型整数，按照从右向左的阅读顺序，返回一个不含重复数字的新的整数。
+
+输入描述:
+输入一个int型整数
+
+输出描述:
+按照从右向左的阅读顺序，返回一个不含重复数字的新的整数
+
+示例1
+输入
+复制
+9876673
+输出
+复制
+37689
+
+*/
+
+
+
+#include<iostream>
+#include<string>
+#include<algorithm>
+#include<math.h>
+using namespace std;
+
+int main() {
+	string s;
+	cin >> s;
+	int a[10];
+	int num;
+	for (int j = 0; j <= 9; j++) {
+		a[j] = 0;
+	
+	}
+	for (int i = s.size() - 1; i >= 0; i--) {
+		num = s[i]-'0';
+		a[num]++;
+		if (a[num] == 1) {
+			cout << s[i];
+		}
+		else { continue; }
+	}
+	cout << endl;
+
+}
