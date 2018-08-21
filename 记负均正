@@ -1,0 +1,56 @@
+/*
+题目描述
+首先输入要输入的整数个数n，然后输入n个整数。输出为n个整数中负数的个数，和所有正整数的平均值，结果保留一位小数。
+
+输入描述:
+首先输入一个正整数n，
+然后输入n个整数。
+
+输出描述:
+输出负数的个数，和所有正整数的平均值。
+
+示例1
+输入
+复制
+5
+1
+2
+3
+4
+5
+输出
+复制
+0 3
+*/
+#include<iostream>
+#include<string>
+#include<algorithm>
+#include<math.h>
+#include<iomanip>
+using namespace std;
+
+signed int a[2000];
+int main() {
+	int n;
+	while (cin >> n) {
+		for (int i = 0; i <= 199; i++) {
+			a[i] = 0;
+		}
+		int count = 0; double sum = 0; int zheng = 0;
+		for (int i = 0; i <= n - 1; i++) {
+			cin >> a[i];
+
+		}
+		for (int i = 0; i <= n - 1; i++) {
+			if (a[i] < 0) { count++; }
+			if (a[i]>0) { sum += a[i]; zheng++; }
+
+		}
+		cout << count <<" "<< fixed << setprecision(1) << (double)sum / zheng << endl;
+
+
+	}
+
+
+
+}
